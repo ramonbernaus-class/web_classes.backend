@@ -16,6 +16,22 @@ models.Base.metadata.create_all(bind=database.engine)
 
 app = FastAPI()
 
+from fastapi.middleware.cors import CORSMiddleware
+
+origins = [
+    "https://celadon-kashata-ec3aa3.netlify.app",
+    "http://localhost:5173",  # vite dev server
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
 # Configuración de seguridad
 SECRET_KEY = "yeywryds-pritwrt-qettery5425"  
 ALGORITHM = "HS256"
