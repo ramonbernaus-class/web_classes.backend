@@ -1,0 +1,463 @@
+[
+        {
+            "titulo": "Salutacio personalitzada",
+            "enunciado": "Escriu un programa que demani el nom del usuari i despres imprim: `¡Hola, [nom]!`",
+            "solucion": "nom = input('¿Quin es tu nom? ')\nprint(f'¡Hola, {nom}!')",
+            "dificultad": "fácil",
+            "lenguaje": "Python",
+            "categoria_nombre": "Print/Input"
+        },
+        {
+            "titulo": "Suma de dos números",
+            "enunciado": "Escriu un programa que demani dos números al usuari i mostri la seva suma.",
+            "solucion": "num1 = float(input('Introdueix el primer número: '))\nnum2 = float(input('Introdueix el segundo número: '))\nprint('La suma es:', num1 + num2)",
+            "dificultad": "fácil",
+            "lenguaje": "Python",
+            "categoria_nombre": "Print/Input"
+        },
+        {
+            "titulo": "Àrea de un rectàngule",
+            "enunciado": "Escriu un programa que demani la base i la altura de un rectàngule y mostri la seva àrea.",
+            "solucion": "base = float(input('Base del rectàngule: '))\naltura = float(input('Altura del rectàngule: '))\nprint('El àrea es:', base * altura)",
+            "dificultad": "fácil",
+            "lenguaje": "Python",
+            "categoria_nombre": "Print/Input"
+        },
+        {
+            "titulo": "Conversió de graus",
+            "enunciado": "Escriu un programa que demani una temperatura en graus Celsius i la convierteixi a Fahrenheit.",
+            "solucion": "celsius = float(input('Temperatura en Celsius: '))\nfahrenheit = (celsius * 9/5) + 32\nprint('Equivalent en Fahrenheit:', fahrenheit)",
+            "dificultad": "fácil",
+            "lenguaje": "Python",
+            "categoria_nombre": "Print/Input"
+        },
+        {
+            "titulo": "Número parell o senar",
+            "enunciado": "Escriu un programa que demani un número i digues si es parell o senar.",
+            "solucion": "numero = int(input('Introdueix un número: '))\nif numero % 2 == 0:\n    print('Es parell')\nelse:\n    print('Es senar')",
+            "dificultad": "fácil",
+            "lenguaje": "Python",
+            "categoria_nombre": "Print/Input"
+        },
+        {
+            "titulo": "Salutacio amb edat",
+            "enunciado": "Escriu un programa que demani el nom i la edat del usuari i despres imprim: `Hola, [nom], tens [edat] anys.`",
+            "solucion": "nombre = input('Quin es el teu nom? ')\nedat = input('¿Cuants anys tens? ')\nprint(f'Hola, {nom}, tens {edat} anys.')",
+            "dificultad": "fácil",
+            "lenguaje": "Python",
+            "categoria_nombre": "Print/Input"
+        },
+        {
+            "titulo": "Salutacio personalitzada",
+            "enunciado": "Escriu un programa que demani el nom de l'usuari i després imprimeixi: `¡Hola, [nom]!`",
+            "solucion": "nom = input('Quin és el teu nom? ')\nprint(f'¡Hola, {nom}!')",
+            "dificultad": "fácil",
+            "lenguaje": "Python",
+            "categoria_nombre": "Print/Input"
+        },
+        {
+            "titulo": "Multiplicació de dos números",
+            "enunciado": "Escriu un programa que demani dos números a l'usuari i mostri el seu producte.",
+            "solucion": "num1 = float(input('Primer número: '))\nnum2 = float(input('Segon número: '))\nprint('El producte és:', num1 * num2)",
+            "dificultad": "fácil",
+            "lenguaje": "Python",
+            "categoria_nombre": "Print/Input"
+        },
+        {
+            "titulo": "Nom complert",
+            "enunciado": "Escriu un programa que demani el nom i el cognom de l'usuari i després imprimeixi el nom complet.",
+            "solucion": "nom = input('Nom: ')\ncognom = input('Cognom: ')\nprint('Nom complet:', nom, cognom)",
+            "dificultad": "fácil",
+            "lenguaje": "Python",
+            "categoria_nombre": "Print/Input"
+        },
+        {
+            "titulo": "Suma y promitg",
+            "enunciado": "Escriu un programa que demani tres números, mostri la seva suma i la seva mitjana.",
+            "solucion": "a = float(input('Número 1: '))\nb = float(input('Número 2: '))\nc = float(input('Número 3: '))\nsuma = a + b + c\nmitjana = suma / 3\nprint('Suma:', suma, 'Mitjana:', mitjana)",
+            "dificultad": "fácil",
+            "lenguaje": "Python",
+            "categoria_nombre": "Print/Input"
+        },
+        {
+            "titulo": "Salutacio segons l'hora",
+            "enunciado": "Escriu un programa que demani l'hora (0-23) i digui `Bon dia`, `Bona tarda` o `Bona nit` segons correspongui.",
+            "solucion": "hora = int(input(\"Introdueix l'hora (0-23): \"))\nif 6 <= hora < 12:\n    print('Bon dia')\nelif 12 <= hora < 20:\n    print('Bona tarda')\nelse:\n    print('Bona nit')",
+            "dificultad": "fácil",
+            "lenguaje": "Python",
+            "categoria_nombre": "Print/Input"
+        },
+        {
+            "titulo": "Número positiu o negatiu",
+            "enunciado": "Escriu un programa que demani un número i digui si és positiu o negatiu.",
+            "solucion": "num = float(input('Introdueix un número: '))\nif num >= 0:\n    print('És positiu')\nelse:\n    print('És negatiu')",
+            "dificultad": "fácil",
+            "lenguaje": "Python",
+            "categoria_nombre": "If/Elif/Else"
+        },
+        {
+            "titulo": "Major d’edat",
+            "enunciado": "Escriu un programa que demani l’edat de l’usuari i digui si és major o menor d’edat (18 anys).",
+            "solucion": "edat = int(input('Quants anys tens? '))\nif edat >= 18:\n    print('Ets major d’edat')\nelse:\n    print('Ets menor d’edat')",
+            "dificultad": "fácil",
+            "lenguaje": "Python",
+            "categoria_nombre": "If/Elif/Else"
+        },
+        {
+            "titulo": "Parell o senar",
+            "enunciado": "Escriu un programa que demani un número i mostri si és parell o senar.",
+            "solucion": "num = int(input('Introdueix un número: '))\nif num % 2 == 0:\n    print('És parell')\nelse:\n    print('És senar')",
+            "dificultad": "fácil",
+            "lenguaje": "Python",
+            "categoria_nombre": "If/Elif/Else"
+        },
+        {
+            "titulo": "Nota aprovada o suspesa",
+            "enunciado": "Escriu un programa que demani una nota (0-10) i digui si està aprovada (>=5) o suspesa (<5).",
+            "solucion": "nota = float(input('Introdueix la teva nota: '))\nif nota >= 5:\n    print('Has aprovat!')\nelse:\n    print('Has suspès.')",
+            "dificultad": "fácil",
+            "lenguaje": "Python",
+            "categoria_nombre": "If/Elif/Else"
+        },
+        {
+            "titulo": "Comprovació de contrasenya",
+            "enunciado": "Escriu un programa que demani una contrasenya i comprovi si coincideix amb 'python123'.",
+            "solucion": "clau = input('Escriu la contrasenya: ')\nif clau == 'python123':\n    print('Contrasenya correcta')\nelse:\n    print('Contrasenya incorrecta')",
+            "dificultad": "fácil",
+            "lenguaje": "Python",
+            "categoria_nombre": "If/Elif/Else"
+        },
+        {
+            "titulo": "Número dins del rang",
+            "enunciado": "Escriu un programa que demani un número i digui si està dins del rang [10, 20] o no.",
+            "solucion": "num = int(input('Introdueix un número: '))\nif 10 <= num <= 20:\n    print('El número està dins del rang')\nelse:\n    print('El número està fora del rang')",
+            "dificultad": "media",
+            "lenguaje": "Python",
+            "categoria_nombre": "If/Elif/Else"
+        },
+        {
+            "titulo": "El més gran de dos números",
+            "enunciado": "Escriu un programa que demani dos números i mostri quin és més gran.",
+            "solucion": "a = float(input('Primer número: '))\nb = float(input('Segon número: '))\nif a > b:\n    print('El primer és més gran')\nelse:\n    print('El segon és més gran o igual')",
+            "dificultad": "media",
+            "lenguaje": "Python",
+            "categoria_nombre": "If/Elif/Else"
+        },
+        {
+            "titulo": "Any de traspàs",
+            "enunciado": "Escriu un programa que demani un any i digui si és de traspàs (múltiple de 4 però no de 100, excepte si és múltiple de 400).",
+            "solucion": "any = int(input('Introdueix un any: '))\nif (any % 4 == 0 and any % 100 != 0) or (any % 400 == 0):\n    print('És any de traspàs')\nelse:\n    print('No és any de traspàs')",
+            "dificultad": "media",
+            "lenguaje": "Python",
+            "categoria_nombre": "If/Elif/Else"
+        },
+        {
+            "titulo": "Classificació de nota",
+            "enunciado": "Escriu un programa que demani una nota i digui si és: Suspès (<5), Aprovat (5-6), Bé (7-8) o Excel·lent (9-10).",
+            "solucion": "nota = float(input('Introdueix la teva nota: '))\nif nota < 5:\n    print('Suspès')\nelif nota < 7:\n    print('Aprovat')\nelif nota < 9:\n    print('Bé')\nelse:\n    print('Excel·lent')",
+            "dificultad": "media",
+            "lenguaje": "Python",
+            "categoria_nombre": "If/Elif/Else"
+        },
+        {
+            "titulo": "Comparació de tres números",
+            "enunciado": "Escriu un programa que demani tres números i mostri quin és el més gran.",
+            "solucion": "a = float(input('Primer número: '))\nb = float(input('Segon número: '))\nc = float(input('Tercer número: '))\nif a >= b and a >= c:\n    print('El primer és el més gran')\nelif b >= a and b >= c:\n    print('El segon és el més gran')\nelse:\n    print('El tercer és el més gran')",
+            "dificultad": "media",
+            "lenguaje": "Python",
+            "categoria_nombre": "If/Elif/Else"
+        },
+        {
+            "titulo": "Classificació de triangle",
+            "enunciado": "Escriu un programa que demani tres costats i digui si el triangle és equilàter, isòsceles o escalè.",
+            "solucion": "a = float(input('Costat A: '))\nb = float(input('Costat B: '))\nc = float(input('Costat C: '))\nif a == b == c:\n    print('Equilàter')\nelif a == b or a == c or b == c:\n    print('Isòsceles')\nelse:\n    print('Escalè')",
+            "dificultad": "difícil",
+            "lenguaje": "Python",
+            "categoria_nombre": "If/Elif/Else"
+        },
+        {
+            "titulo": "Signes iguals o diferents",
+            "enunciado": "Escriu un programa que demani dos números i digui si tenen el mateix signe (tots dos positius/negatius) o diferent signe.",
+            "solucion": "a = float(input('Primer número: '))\nb = float(input('Segon número: '))\nif (a >= 0 and b >= 0) or (a < 0 and b < 0):\n    print('Tenen el mateix signe')\nelse:\n    print('Tenen signe diferent')",
+            "dificultad": "difícil",
+            "lenguaje": "Python",
+            "categoria_nombre": "If/Elif/Else"
+        },
+        {
+            "titulo": "Calculadora bàsica",
+            "enunciado": "Escriu un programa que demani dos números i una operació (+, -, *, /) i mostri el resultat corresponent.",
+            "solucion": "a = float(input('Primer número: '))\nb = float(input('Segon número: '))\noperacio = input('Operació (+, -, *, /): ')\nif operacio == '+':\n    print('Resultat:', a + b)\nelif operacio == '-':\n    print('Resultat:', a - b)\nelif operacio == '*':\n    print('Resultat:', a * b)\nelif operacio == '/':\n    if b != 0:\n        print('Resultat:', a / b)\n    else:\n        print('Error: divisió per zero')\nelse:\n    print('Operació no vàlida')",
+            "dificultad": "difícil",
+            "lenguaje": "Python",
+            "categoria_nombre": "If/Elif/Else"
+        },
+        {
+            "titulo": "Conversió de nota a lletra",
+            "enunciado": "Escriu un programa que demani una nota numèrica i la converteixi a lletra: A (9-10), B (7-8), C (5-6), D (<5).",
+            "solucion": "nota = float(input('Introdueix la nota: '))\nif nota >= 9:\n    print('A')\nelif nota >= 7:\n    print('B')\nelif nota >= 5:\n    print('C')\nelse:\n    print('D')",
+            "dificultad": "difícil",
+            "lenguaje": "Python",
+            "categoria_nombre": "If/Elif/Else"
+        },
+        {
+            "titulo": "Ordenar tres números",
+            "enunciado": "Escriu un programa que demani tres números i els mostri en ordre ascendent.",
+            "solucion": "a = float(input('Primer número: '))\nb = float(input('Segon número: '))\nc = float(input('Tercer número: '))\nif a <= b <= c:\n    print(a, b, c)\nelif a <= c <= b:\n    print(a, c, b)\nelif b <= a <= c:\n    print(b, a, c)\nelif b <= c <= a:\n    print(b, c, a)\nelif c <= a <= b:\n    print(c, a, b)\nelse:\n    print(c, b, a)",
+            "dificultad": "difícil",
+            "lenguaje": "Python",
+            "categoria_nombre": "If/Elif/Else"
+        },
+        {
+            "titulo": "Classificació de temperatura corporal",
+            "enunciado": "Demana la temperatura corporal i indica si és hipotèrmia (<35), normal (35-37.5) o febre (>37.5).",
+            "solucion": "t = float(input('Temperatura corporal: '))\nif t < 35:\n    print('Hipotèrmia')\nelif t <= 37.5:\n    print('Temperatura normal')\nelse:\n    print('Febre')",
+            "dificultad": "difícil",
+            "lenguaje": "Python",
+            "categoria_nombre": "If/Elif/Else"
+        },
+        {
+            "titulo": "Validació d'hora",
+            "enunciado": "Demana una hora (0-23) i indica si és matinada, matí, tarda o nit.",
+            "solucion": "h = int(input('Introdueix una hora (0-23): '))\nif h < 0 or h > 23:\n    print('Hora invàlida')\nelif h < 6:\n    print('Matinada')\nelif h < 12:\n    print('Matí')\nelif h < 20:\n    print('Tarda')\nelse:\n    print('Nit')",
+            "dificultad": "difícil",
+            "lenguaje": "Python",
+            "categoria_nombre": "If/Elif/Else"
+        },
+        {
+            "titulo": "Classificació de caràcters",
+            "enunciado": "Demana un únic caràcter i indica si és una vocal, consonant, número o un altre símbol.",
+            "solucion": "c = input('Introdueix un caràcter: ')\nif len(c) != 1:\n    print('Has d'introduir només un caràcter')\nelif c.lower() in 'aeiou':\n    print('Vocal')\nelif c.isalpha():\n    print('Consonant')\nelif c.isdigit():\n    print('Número')\nelse:\n    print('Altres símbols')",
+            "dificultad": "difícil",
+            "lenguaje": "Python",
+            "categoria_nombre": "If/Elif/Else"
+        },
+        {
+            "titulo": "Conversió de dies a nom",
+            "enunciado": "Demana un número del 1 al 7 i mostra quin dia de la setmana és.",
+            "solucion": "d = int(input('Introdueix un número (1-7): '))\nif d == 1:\n    print('Dilluns')\nelif d == 2:\n    print('Dimarts')\nelif d == 3:\n    print('Dimecres')\nelif d == 4:\n    print('Dijous')\nelif d == 5:\n    print('Divendres')\nelif d == 6:\n    print('Dissabte')\nelif d == 7:\n    print('Diumenge')\nelse:\n    print('Número no vàlid')",
+            "dificultad": "difícil",
+            "lenguaje": "Python",
+            "categoria_nombre": "If/Elif/Else"
+        },
+        {
+            "titulo": "Detecció d'any de traspàs",
+            "enunciado": "Demana un any i indica si és de traspàs o no (regles simples).",
+            "solucion": "any = int(input('Introdueix un any: '))\nif (any % 4 == 0 and any % 100 != 0) or (any % 400 == 0):\n    print('Any de traspàs')\nelse:\n    print('No és any de traspàs')",
+            "dificultad": "difícil",
+            "lenguaje": "Python",
+            "categoria_nombre": "If/Elif/Else"
+        },
+        {
+            "titulo": "Classificação d’edat en categories",
+            "enunciado": "Demana l’edat i classifica la persona com a nen (0-12), adolescent (13-17), adult (18-64) o sènior (65+).",
+            "solucion": "e = int(input('Edat: '))\nif e < 0:\n    print('Edat invàlida')\nelif e <= 12:\n    print('Nen')\nelif e <= 17:\n    print('Adolescent')\nelif e <= 64:\n    print('Adult')\nelse:\n    print('Sènior')",
+            "dificultad": "difícil",
+            "lenguaje": "Python",
+            "categoria_nombre": "If/Elif/Else"
+        },
+        {
+            "titulo": "Comparació de tres números (major)",
+            "enunciado": "Demana tres números i indica quin és el més gran.",
+            "solucion": "a = float(input('A: '))\nb = float(input('B: '))\nc = float(input('C: '))\nif a >= b and a >= c:\n    print('El més gran és A')\nelif b >= a and b >= c:\n    print('El més gran és B')\nelse:\n    print('El més gran és C')",
+            "dificultad": "difícil",
+            "lenguaje": "Python",
+            "categoria_nombre": "If/Elif/Else"
+        },
+        {
+            "titulo": "Validació de contrasenya forta",
+            "enunciado": "Demana una contrasenya i indica si és buida, massa curta (<6 caràcters) o vàlida.",
+            "solucion": "pwd = input('Contrasenya: ')\nif pwd == '':\n    print('Contrasenya buida')\nelif len(pwd) < 6:\n    print('Contrasenya massa curta')\nelse:\n    print('Contrasenya vàlida')",
+            "dificultad": "difícil",
+            "lenguaje": "Python",
+            "categoria_nombre": "If/Elif/Else"
+        },
+        {
+            "titulo": "Comparació de números respecte zero",
+            "enunciado": "Demana un número i indica si és major que zero, menor que zero o igual a zero.",
+            "solucion": "n = float(input('Introdueix un número: '))\nif n > 0:\n    print('Major que zero')\nelif n < 0:\n    print('Menor que zero')\nelse:\n    print('Exactament zero')",
+            "dificultad": "difícil",
+            "lenguaje": "Python",
+            "categoria_nombre": "If/Elif/Else"
+        },
+        {
+            "titulo": "Selecció de modalitat",
+            "enunciado": "Demana a l’usuari que triï una modalitat: 'eco', 'normal' o 'turbo', i mostra un missatge segons la tria.",
+            "solucion": "m = input('Modalitat (eco/normal/turbo): ').lower()\nif m == 'eco':\n    print('Has triat mode ecològic')\nelif m == 'normal':\n    print('Has triat mode normal')\nelif m == 'turbo':\n    print('Has triat mode turbo')\nelse:\n    print('Modalitat no reconeguda')",
+            "dificultad": "difícil",
+            "lenguaje": "Python",
+            "categoria_nombre": "If/Elif/Else"
+        },
+        
+        {
+            "titulo": "Imprimir nombres",
+            "enunciado": "Escriu un programa que demani un número n i imprimeixi els nombres de 1 a n.",
+            "solucion": "n = int(input('Introdueix un número: '))\nfor i in range(1, n+1):\n    print(i)",
+            "dificultad": "fácil",
+            "lenguaje": "Python",
+            "categoria_nombre": "Bucles",
+            "subcategoria": "For"
+        },
+        {
+            "titulo": "Suma dels primers n números",
+            "enunciado": "Escriu un programa que demani un número n i mostri la suma dels primers n números naturals.",
+            "solucion": "n = int(input('Introdueix un número: '))\nsuma = 0\nfor i in range(1, n+1):\n    suma += i\nprint('La suma és:', suma)",
+            "dificultad": "fácil",
+            "lenguaje": "Python",
+            "categoria_nombre": "Bucles",
+            "subcategoria": "For"
+        },
+        {
+            "titulo": "Multiplicar per 2",
+            "enunciado": "Escriu un programa que demani un número n i imprimeixi els primers n nombres multiplicats per 2.",
+            "solucion": "n = int(input('Introdueix un número: '))\nfor i in range(1, n+1):\n    print(i * 2)",
+            "dificultad": "fácil",
+            "lenguaje": "Python",
+            "categoria_nombre": "Bucles",
+            "subcategoria": "For"
+        },
+        {
+            "titulo": "Llistat de noms",
+            "enunciado": "Escriu un programa que demani 5 noms i els imprimeixi un per línia.",
+            "solucion": "for i in range(5):\n    nom = input('Introdueix un nom: ')\n    print(nom)",
+            "dificultad": "fácil",
+            "lenguaje": "Python",
+            "categoria_nombre": "Bucles",
+            "subcategoria": "For"
+        },
+        {
+            "titulo": "Comptar parells",
+            "enunciado": "Escriu un programa que demani un número n i imprimeixi tots els nombres parells de 1 a n.",
+            "solucion": "n = int(input('Introdueix un número: '))\nfor i in range(1, n+1):\n    if i % 2 == 0:\n        print(i)",
+            "dificultad": "fácil",
+            "lenguaje": "Python",
+            "categoria_nombre": "Bucles",
+            "subcategoria": "For"
+        },
+        
+        {
+            "titulo": "Suma amb while",
+            "enunciado": "Escriu un programa que demani números a l'usuari fins que introdueixi 0 i mostri la suma total.",
+            "solucion": "suma = 0\nnum = int(input('Introdueix un número (0 per aturar): '))\nwhile num != 0:\n    suma += num\n    num = int(input('Introdueix un número (0 per aturar): '))\nprint('La suma total és:', suma)",
+            "dificultad": "fácil",
+            "lenguaje": "Python",
+            "categoria_nombre": "Bucles",
+            "subcategoria": "While"
+        },
+        {
+            "titulo": "Contrasenya correcta",
+            "enunciado": "Escriu un programa que demani una contrasenya fins que l'usuari escrigui 'python123'.",
+            "solucion": "clau = input('Escriu la contrasenya: ')\nwhile clau != 'python123':\n    print('Incorrecte, torna-ho a intentar')\n    clau = input('Escriu la contrasenya: ')\nprint('Contrasenya correcta!')",
+            "dificultad": "fácil",
+            "lenguaje": "Python",
+            "categoria_nombre": "Bucles",
+            "subcategoria": "While"
+        },
+        {
+            "titulo": "Número positiu",
+            "enunciado": "Escriu un programa que demani un número positiu i torni a demanar-lo si l'usuari introdueix un número negatiu o 0.",
+            "solucion": "num = int(input('Introdueix un número positiu: '))\nwhile num <= 0:\n    print('Número no vàlid')\n    num = int(input('Introdueix un número positiu: '))\nprint('Número acceptat:', num)",
+            "dificultad": "fácil",
+            "lenguaje": "Python",
+            "categoria_nombre": "Bucles",
+            "subcategoria": "While"
+        },
+        {
+            "titulo": "Adivina el número",
+            "enunciado": "Escriu un programa que pensi un número secret (5) i demani a l'usuari endevinar-lo fins que ho aconsegueixi.",
+            "solucion": "secret = 5\nnum = int(input('Endevina el número: '))\nwhile num != secret:\n    print('Incorrecte, prova de nou')\n    num = int(input('Endevina el número: '))\nprint('Correcte!')",
+            "dificultad": "fácil",
+            "lenguaje": "Python",
+            "categoria_nombre": "Bucles",
+            "subcategoria": "While"
+        },
+        {
+            "titulo": "Comptar fins a n",
+            "enunciado": "Escriu un programa que demani un número n i imprimeixi tots els nombres de 1 a n utilitzant while.",
+            "solucion": "n = int(input('Introdueix un número: '))\ni = 1\nwhile i <= n:\n    print(i)\n    i += 1",
+            "dificultad": "fácil",
+            "lenguaje": "Python",
+            "categoria_nombre": "Bucles",
+            "subcategoria": "While"
+        },
+        {
+            "titulo": "Factorial",
+            "enunciado": "Escriu un programa que demani un número n i calculi el factorial de n. Es pot fer amb for o while.",
+            "solucion": "n = int(input('Introdueix un número: '))\nfact = 1\nfor i in range(1, n+1):\n    fact *= i\nprint('Factorial:', fact)",
+            "dificultad": "difícil",
+            "lenguaje": "Python",
+            "categoria_nombre": "Bucles",
+            "subcategoria": "For-While"
+        },
+        {
+            "titulo": "Comptar vocals",
+            "enunciado": "Escriu un programa que demani una cadena i compti quantes vocals té. Es pot fer amb for o while.",
+            "solucion": "text = input('Escriu un text: ')\nvocals = 'aeiouAEIOU'\ncount = 0\nfor c in text:\n    if c in vocals:\n        count += 1\nprint('Número de vocals:', count)",
+            "dificultad": "difícil",
+            "lenguaje": "Python",
+            "categoria_nombre": "Bucles",
+            "subcategoria": "For-While"
+        },
+        {
+            "titulo": "Suma fins a n parells",
+            "enunciado": "Escriu un programa que demani un número n i sumi tots els nombres parells de 1 a n. Es pot fer amb for o while.",
+            "solucion": "n = int(input('Introdueix un número: '))\nsuma = 0\nfor i in range(2, n+1, 2):\n    suma += i\nprint('Suma dels parells:', suma)",
+            "dificultad": "difícil",
+            "lenguaje": "Python",
+            "categoria_nombre": "Bucles",
+            "subcategoria": "For-While"
+        },
+        {
+            "titulo": "Llista inversa",
+            "enunciado": "Escriu un programa que demani 5 nombres i els imprimeixi en ordre invers. Es pot fer amb for o while.",
+            "solucion": "nums = []\nfor i in range(5):\n    nums.append(int(input('Número: ')))\nfor i in range(4, -1, -1):\n    print(nums[i])",
+            "dificultad": "difícil",
+            "lenguaje": "Python",
+            "categoria_nombre": "Bucles",
+            "subcategoria": "For-While"
+        },
+        {
+            "titulo": "Exercicis a l'inversa",
+            "enunciado": "Digues quin es el resultat que donara aquest exercici:\nfor i in range(3):\nprint('Hola', i)",
+            "solucion": "Hola 1\n Hola 2\n Hola 3",
+            "dificultad": "fácil",
+            "lenguaje":"Python",
+            "categoria_nombre": "Bucles",
+            "subcategoria":"For"
+        }, 
+        {
+            "titulo": "Exercicis a l'inversa",
+            "enunciado": "Digues quin és el resultat que donarà aquest exercici:\nsuma = 0\nfor n in range(1, 6):\n    suma += n\nprint(suma)",
+            "solucion": "15",
+            "dificultad": "fácil",
+            "lenguaje": "Python",
+            "categoria_nombre": "Bucles",
+            "subcategoria": "For"
+        },
+        {
+            "titulo": "Exercicis a l'inversa",
+            "enunciado": "Digues quin és el resultat que donarà aquest exercici:\nfor lletra in 'python':\n    if lletra == 'h':\n        break\n    print(lletra)",
+            "solucion": "p\ny\nt",
+            "dificultad": "media",
+            "lenguaje": "Python",
+            "categoria_nombre": "Bucles",
+            "subcategoria": "For"
+        },
+        {
+            "titulo": "Exercicis a l'inversa",
+            "enunciado": "Digues quin és el resultat que donarà aquest exercici:\ncontador = 0\nfor x in range(10):\n    if x % 2 == 0:\n        contador += 1\nprint(contador)",
+            "solucion": "5",
+            "dificultad": "media",
+            "lenguaje": "Python",
+            "categoria_nombre": "Bucles",
+            "subcategoria": "For"
+        },
+        {
+            "titulo": "Exercicis a l'inversa",
+            "enunciado": "Digues quin és el resultat que donarà aquest exercici:\nn = 5\nwhile n > 0:\n    print('Compte enrere:', n)\n    n -= 2\nprint('Desplegament!')",
+            "solucion": "Compte enrere: 5\nCompte enrere: 3\nCompte enrere: 1\nDesplegament!",
+            "dificultad": "fácil",
+            "lenguaje": "Python",
+            "categoria_nombre": "Bucles",
+            "subcategoria": "While"
+        }
+    ]
