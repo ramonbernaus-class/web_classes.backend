@@ -21,7 +21,7 @@ app = FastAPI()
 
 
 origins = [
-    "https://celadon-kashata-ec3aa3.netlify.app",
+    "https://classesrepasramon.netlify.app",
     "http://localhost:5173",  # vite dev server
 ]
 
