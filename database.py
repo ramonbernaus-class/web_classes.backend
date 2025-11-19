@@ -1,14 +1,23 @@
 # backend/database.py
+import os
 from sqlalchemy import create_engine
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker, declarative_base
+from dotenv import load_dotenv
 
-SQLALCHEMY_DATABASE_URL = "sqlite:///./ejercicios.db"
+# Cargar variables de entorno (solo necesario en local)
+load_dotenv()
 
+# Leer DATABASE_URL desde variables de entorno
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+# Crear motor de PostgreSQL (Neon)
 engine = create_engine(
-    SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False}
+    DATABASE_URL,
+    pool_pre_ping=True,  # mantiene la conexión activa y evita fallos
 )
 
+# Crear sesión
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
+# Base para los modelos
 Base = declarative_base()
