@@ -170,3 +170,6 @@ def listar_entregas(
         for e in entregas
     ]
 
+@app.get("/api/ping")
+def ping():
+    return {"status": "ok"}
