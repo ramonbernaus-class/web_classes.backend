@@ -1,5 +1,4 @@
-# backend/dependencies.py
-
+# dependencies.py
 from fastapi import Depends, HTTPException
 from sqlalchemy.orm import Session
 from models import Usuario
@@ -19,6 +18,7 @@ pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/login")
 
 
+# --- DB session ---
 def get_db():
     db = SessionLocal()
     try:
@@ -27,6 +27,7 @@ def get_db():
         db.close()
 
 
+# --- Password utils ---
 def verify_password(plain_password, hashed_password):
     return pwd_context.verify(plain_password, hashed_password)
 
@@ -36,6 +37,7 @@ def get_password_hash(password):
     return pwd_context.hash(password)
 
 
+# --- JWT token ---
 def create_access_token(data: dict):
     to_encode = data.copy()
     expire = datetime.utcnow() + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
@@ -43,7 +45,12 @@ def create_access_token(data: dict):
     return jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
 
 
-def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)):
+# --- Auth ---
+
+def get_current_user(
+    token: str = Depends(oauth2_scheme),
+    db: Session = Depends(get_db)
+):
     credentials_exception = HTTPException(
         status_code=401,
         detail="Token inválido o expirado",
@@ -59,14 +66,16 @@ def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(
         raise credentials_exception
 
     usuario = db.query(Usuario).filter(Usuario.id == int(user_id)).first()
-    if not usuario:
+    if usuario is None:
         raise credentials_exception
 
     return usuario
 
 
-def require_professor(usuario: Usuario = Depends(get_current_user)):
+# --- ADMIN requirement (esta es la que falta) ---
+def require_admin(usuario: Usuario = Depends(get_current_user)):
     if usuario.rol != "admin":
         raise HTTPException(status_code=403, detail="No autorizado")
     return usuario
+
 
