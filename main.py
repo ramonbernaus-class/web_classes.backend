@@ -143,7 +143,7 @@ def crear_entrega(
     usuario = Depends(get_current_user)
 ):
     nueva = models.Entrega(
-        usuario_id=entrega.usuario_id,
+        usuario_id=usuario.id,
         ejercicio_id=entrega.ejercicio_id,
         codigo=entrega.codigo,
         fecha_envio=datetime.utcnow()
