@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
+from backend import models
 from models import Usuario
 from dependencies import get_db, get_password_hash, require_admin
 
@@ -85,3 +86,39 @@ def reset_password(
     usuario.hashed_password = get_password_hash(new_password)
     db.commit()
     return {"mensaje": "Contraseña actualizada"}
+
+# 🟦 Estadísticas del sistema
+@router.get("/estadisticas")
+def estadisticas(db: Session = Depends(get_db), admin = Depends(require_admin)):
+
+    total_usuarios = db.query(Usuario).count()
+    total_admins = db.query(Usuario).filter(Usuario.rol == "admin").count()
+    total_alumnos = db.query(Usuario).filter(Usuario.rol == "alumno").count()
+
+    total_categorias = db.query(models.Categoria).count()
+    total_ejercicios = db.query(models.Ejercicio).count()
+    total_entregas = db.query(models.Entrega).count()
+
+    # últimas 5 entregas
+    entregas = db.query(models.Entrega)\
+        .order_by(models.Entrega.fecha_envio.desc())\
+        .limit(5)\
+        .all()
+
+    ultimas = [
+        {
+            "usuario": e.usuario.nombre,
+            "ejercicio": e.ejercicio.titulo,
+            "fecha_envio": e.fecha_envio.isoformat(),
+        } for e in entregas
+    ]
+
+    return {
+        "usuarios": total_usuarios,
+        "admins": total_admins,
+        "alumnos": total_alumnos,
+        "categorias": total_categorias,
+        "ejercicios": total_ejercicios,
+        "entregas": total_entregas,
+        "ultimas_entregas": ultimas
+    }
