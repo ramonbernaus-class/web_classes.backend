@@ -33,6 +33,7 @@ app.include_router(admin_router)
 origins = [
     "https://classesrepasramon.netlify.app",
     "http://localhost:5173",
+    "https://web-classes.vercel.app",
 ]
 
 app.add_middleware(
