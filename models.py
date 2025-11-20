@@ -37,6 +37,7 @@ class Usuario(Base):
     email = Column(String) 
     nombre = Column(String, unique=True, index=True)  
     hashed_password = Column(String)
+    rol = Column(String, default="alumno")
 
     entregas = relationship("Entrega", back_populates="usuario")
 
