@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from backend import models
+import models
 from models import Usuario
 from dependencies import get_db, get_password_hash, require_admin
 
