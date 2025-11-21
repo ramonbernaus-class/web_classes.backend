@@ -71,8 +71,6 @@ def get_current_user(
 
     return usuario
 
-
-# --- ADMIN requirement (esta es la que falta) ---
 def require_admin(usuario: Usuario = Depends(get_current_user)):
     if usuario.rol != "admin":
         raise HTTPException(status_code=403, detail="No autorizado")
