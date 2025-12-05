@@ -122,3 +122,19 @@ def estadisticas(db: Session = Depends(get_db), admin = Depends(require_admin)):
         "entregas": total_entregas,
         "ultimas_entregas": ultimas
     }
+
+# ejemplo dentro del router admin
+@router.put("/entregas/{entrega_id}/revisar")
+def revisar_entrega(entrega_id: int, resultado: str = "revisado", db: Session = Depends(get_db), admin = Depends(require_admin)):
+    e = db.query(models.Entrega).filter(models.Entrega.id == entrega_id).first()
+    if not e: raise HTTPException(status_code=404, detail="No encontrado")
+    e.resultado = resultado
+    db.commit()
+    return {"mensaje": "Entrega marcada"}
+
+@router.delete("/entregas/{entrega_id}")
+def borrar_entrega(entrega_id: int, db: Session = Depends(get_db), admin = Depends(require_admin)):
+    e = db.query(models.Entrega).filter(models.Entrega.id == entrega_id).first()
+    if not e: raise HTTPException(status_code=404)
+    db.delete(e); db.commit()
+    return {"mensaje":"Eliminada"}

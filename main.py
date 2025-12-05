@@ -26,6 +26,9 @@ models.Base.metadata.create_all(bind=database.engine)
 
 app = FastAPI()
 
+from admin_ejercicios import router as admin_ejercicios_router
+app.include_router(admin_ejercicios_router)
+
 # Añadir router de administración
 app.include_router(admin_router)
 
