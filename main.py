@@ -14,6 +14,7 @@ from dependencies import (
     get_db,
     get_current_user,
     create_access_token,
+    require_admin,
     verify_password,
     get_password_hash
 )
@@ -173,6 +174,27 @@ def listar_entregas(
         }
         for e in entregas
     ]
+
+
+@admin_router.get("/entregas")
+def listar_entregas_admin(
+    db: Session = Depends(get_db),
+    admin = Depends(require_admin)
+):
+    entregas = db.query(models.Entrega).all()
+    return [
+        {
+            "id": e.id,
+            "usuario": e.usuario.nombre,
+            "ejercicio": e.ejercicio.titulo,
+            "codigo": e.codigo,
+            "fecha_envio": e.fecha_envio,
+            "resultado": e.resultado,
+            "categoria_id": e.ejercicio.categoria_id
+        }
+        for e in entregas
+    ]
+
 
 @app.get("/api/ping")
 def ping():

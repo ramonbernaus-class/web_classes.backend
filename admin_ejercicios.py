@@ -60,7 +60,7 @@ def obtener_ejercicio(ejercicio_id: int, db: Session = Depends(get_db), admin = 
     return e
 
 # --- Crear ejercicio
-@router.post("")
+@router.post("/")
 def crear_ejercicio(payload: EjercicioCreate, db: Session = Depends(get_db), admin = Depends(require_admin)):
     if not payload.titulo or payload.titulo.strip() == "":
         raise HTTPException(status_code=400, detail="El título es obligatorio")
