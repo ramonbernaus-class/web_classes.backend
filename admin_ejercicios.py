@@ -31,7 +31,7 @@ class EjercicioUpdate(BaseModel):
     subcategoria: Optional[str] = None
 
 # --- Listar ejercicios (con filtros opcionales y opcional paginación)
-@router.get("", response_model=List[models.Ejercicio])
+@router.get("/", response_model=List[models.Ejercicio])
 def listar_ejercicios(
     categoria_id: Optional[int] = None,
     dificultad: Optional[str] = None,
