@@ -101,22 +101,7 @@ def listar_ejercicios(
     return q.order_by(models.Ejercicio.id.desc()).offset(skip).limit(limit).all()
 
 
-# =========================================================
-# Obtener un ejercicio por id
-# =========================================================
 
-@router.get("/{ejercicio_id}")
-def obtener_ejercicio(
-    ejercicio_id: int,
-    db: Session = Depends(get_db),
-    admin = Depends(require_admin)
-):
-    e = db.query(models.Ejercicio).filter(models.Ejercicio.id == ejercicio_id).first()
-
-    if not e:
-        raise HTTPException(status_code=404, detail="Ejercicio no encontrado")
-
-    return e
 
 
 # =========================================================
@@ -218,6 +203,23 @@ def importar_ejercicios_lote(
         "ejercicios_creados": ejercicios_creados,
         "detalle_errores": errores
     }
+
+# =========================================================
+# Obtener un ejercicio por id
+# =========================================================
+
+@router.get("/{ejercicio_id}")
+def obtener_ejercicio(
+    ejercicio_id: int,
+    db: Session = Depends(get_db),
+    admin = Depends(require_admin)
+):
+    e = db.query(models.Ejercicio).filter(models.Ejercicio.id == ejercicio_id).first()
+
+    if not e:
+        raise HTTPException(status_code=404, detail="Ejercicio no encontrado")
+
+    return e
 
 
 # =========================================================
